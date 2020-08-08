@@ -1,4 +1,7 @@
 #about-me img {
+  position: relative;
+}
+#about-me img {
   border-radius: 50%;
   width: 150px;
   height: 150px;
