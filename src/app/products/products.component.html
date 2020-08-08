@@ -1,0 +1,40 @@
+<section class="container">
+  <h1 class="text-danger">{{title}}</h1>
+  <hr />
+
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let product of products">
+        <tr>
+          <td>{{product.id}}</td>
+          <td>
+            <a href="/product/{{[product.id]}}"> {{product.name}}</a>
+          </td>
+          <td>{{product.description}}</td>
+          <td>${{product.price}}</td>
+          <td>{{product.quantity}}</td>
+
+          <a
+            href="/product/{{product.id}}"
+            class="btn btn-info btn-sm"
+            style="margin-right: 6px;"
+            >Edit</a
+          >
+          <a href="/product/{{product.id}}" class="btn btn-danger btn-sm"
+            >Delete</a
+          >
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
