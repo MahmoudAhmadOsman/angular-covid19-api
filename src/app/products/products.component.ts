@@ -12,28 +12,32 @@ export class ProductsComponent implements OnInit {
     {
       id: 1,
       name: "Frozen Beaf",
-      description: "Incidunt et magni",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 870.0,
       quantity: 4754,
     },
     {
       id: 2,
       name: "Rustic Chicken",
-      description: "Sint libero mollitia",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 602.0,
       quantity: 1558,
     },
     {
       id: 3,
       name: "Metal Computer",
-      description: "In consequuntur cupiditat",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 649.0,
       quantity: 1566,
     },
     {
       id: 4,
       name: "Refined Chair",
-      description: "Saepe nemo praesentium",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 660.0,
       quantity: 4679,
     },
