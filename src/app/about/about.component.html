@@ -1,8 +1,29 @@
-<section class="container">
-  <h1>About Me</h1>
-  <p>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est itaque
-    voluptate aliquid illo. Fugit molestias dignissimos aperiam eligendi
-    blanditiis placeat alias iure, perspiciatis in itaque.
-  </p>
+<section class="container text-center" id="about-me">
+  <div class="row">
+    <div class="col-sm-6 col-md-offset-3">
+      <h1 class="text-primary">About Me</h1>
+      <div class="thumbnail" *ngFor="let details of profile">
+        <img src="{{details.image}}" alt="{{details.name}}" />
+        <div class="caption">
+          <h3>{{details.name}}</h3>
+          <p><b>Education:</b> {{details.education}}</p>
+          <p><b>School Gratuated: </b> {{details.school}}</p>
+          <p><b>Year of Graduatation:</b> {{details.year}}</p>
+          <p><b>Phone Number</b> {{details.phone}}</p>
+          <hr />
+          <p>{{details.description}}</p>
+
+          <p>
+            <a
+              href="http://www.mahmoudosman.com"
+              class="btn btn-default"
+              role="button"
+              target="_blank"
+              >Learn More</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
