@@ -9,6 +9,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProductsComponent } from './products/products.component';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     PageNotFoundComponent,
     ProductsComponent,
+    StudentsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

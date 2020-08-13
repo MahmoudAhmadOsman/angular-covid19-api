@@ -7,8 +7,14 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   title: string = "Home Page";
+  // myName: string = "Mahmoud Osman";
 
-  constructor() {}
+  constructor() {
+    //Return or show  name in the home component
+    // gitName(){
+    //   return this.myName;
+    // }
+  }
 
   ngOnInit(): void {}
 }
