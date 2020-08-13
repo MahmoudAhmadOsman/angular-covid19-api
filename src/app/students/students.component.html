@@ -1,10 +1,18 @@
 <section class="container">
   <h1 class="text-primary">{{title}}</h1>
   <hr />
-
-  <ul>
-    <li *ngFor="let student of students">
-      {{student}}
-    </li>
-  </ul>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{student}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
