@@ -1,3 +1,7 @@
 .contact {
   margin-bottom: 60px;
 }
+
+.contact .form-control.ng-invalid.ng-touched {
+  border: 2px solid #f00;
+}
