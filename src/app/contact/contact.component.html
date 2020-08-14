@@ -1,39 +1,101 @@
 <div class="contact container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
       <h1 class="text-primary">Contact Me</h1>
       <hr />
       <br />
-      <form action="#">
+      <form accept="#" method="POST">
         <div class="form-group">
           <label for="name">Full Name</label>
+          <!-- create templage variable called #fullName -->
           <input
             type="text"
-            class="form-control"
+            ngModel
             id="name"
-            placeholder="Full name"
+            class="form-control"
+            name="name"
+            placeholder="Enter your full name"
+            #fullName="ngModel"
+            (change)="log(fullName)"
             required
+            minlength="5"
           />
+          <span
+            class="text-danger"
+            *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)"
+            >Full name is required</span
+          >
+          <!-- <p
+            class="text-danger"
+            *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)"
+          >
+            Name must be more than 5 characters!
+          </p> -->
         </div>
         <div class="form-group">
           <label for="email">Email address</label>
           <input
             type="email"
-            class="form-control"
+            ngModel
             id="email"
-            placeholder="Email address"
+            class="form-control"
+            name="email"
+            placeholder="Email valid email address"
             required
+            #email="ngModel"
           />
+          <span
+            class="text-danger"
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            >Email address is required</span
+          >
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
           <input
+            ngModel
             type="text"
-            class="form-control"
             id="phone"
+            class="form-control"
+            name="phone"
             placeholder="Enter phone number"
             required
+            #phone="ngModel"
+            maxlength="10"
+            minlength="10"
           />
+          <span
+            class="text-danger"
+            *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+            >Phone number is required</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            ngModel
+            class="form-control"
+            id="message"
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Enter your message"
+            required
+            #message="ngModel"
+            minlength="20"
+          ></textarea>
+          <span
+            class="text-danger"
+            *ngIf="message.invalid && (message.dirty || message.touched)"
+            >Message is required</span
+          >
+          <p
+            class="text-danger"
+            *ngIf="message.invalid && (message.dirty || message.touched)"
+          >
+            Message must be more than
+            {{message.errors.minlength.requiredLength}} characters!
+          </p>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">

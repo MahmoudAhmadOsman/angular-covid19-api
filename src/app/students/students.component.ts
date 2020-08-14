@@ -7,7 +7,7 @@ import { StudentsService } from "./../services/students.service";
   styleUrls: ["./students.component.css"],
 })
 export class StudentsComponent implements OnInit {
-  title: string = "Student List";
+  title: string = "Students List";
   //get all students here
   students: any[];
 
