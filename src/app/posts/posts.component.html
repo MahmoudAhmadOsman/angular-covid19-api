@@ -3,8 +3,10 @@
     <h1 class="text-danger">{{title}}</h1>
     <hr />
     <p class="text-muted">
-      Display data from:
-      <a href="https://api.covid19api.com/countries">api.covid19api.com</a>
+      Displayed Covid-19 Data From:
+      <a href="https://corona.lmao.ninja/v3/covid-19/countries" target="_blank"
+        >corona.lmao.ninja//v3/covid-19/countries</a
+      >
     </p>
     <div *ngFor="let country of countries ">
       <div class="row">
@@ -16,17 +18,24 @@
           />
         </div>
         <div class="col-md-9 col-xs-12">
-          <h3>
-            <b class="text-danger">Country:</b> &nbsp; {{country.Country}}
-          </h3>
+          <h3><b class="text-info">Country:</b> &nbsp; {{country.country}}</h3>
 
-          <p><b>Slug:</b>{{country.ISO2}}</p>
+          <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
+          <p><b>Total Cases: </b> &nbsp;{{country.cases}}</p>
+          <p><b>Active Cases:</b> &nbsp;{{country.active}}</p>
+          <p><b>Confirmed Cases:</b> &nbsp;{{country.tests}}</p>
+          <p><b>Recovered:</b> &nbsp;{{country.recovered}}</p>
+          <p>
+            <b>Deaths Per One Million:</b> &nbsp;{{country.deathsPerOneMillion}}
+          </p>
+          <p>
+            <b>Recovered Per One Million:</b>
+            &nbsp;{{country.recoveredPerOneMillion}}
+          </p>
 
-          <p><b>ISO2: </b> {{country.ISO2}}</p>
-
-          <p><b>Active Cases:</b>{{country.Active}}</p>
-          <p><b>Confirmed Cases:</b>{{country.Confirmed}}</p>
-          <p><b>Total Deaths:</b>{{country.Deaths}}</p>
+          <p class="text-danger">
+            <b>Total Deaths:</b> &nbsp;{{country.deaths}}
+          </p>
         </div>
       </div>
     </div>

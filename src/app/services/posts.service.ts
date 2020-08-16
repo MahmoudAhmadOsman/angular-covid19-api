@@ -13,7 +13,8 @@ export class PostsService {
   //Create custom function
   getPosts(): Observable<any> {
     //https://jsonplaceholder.typicode.com/posts
-    const URL = "https://api.covid19api.com/countries";
+    //https://api.covid19api.com/countries
+    const URL = "https://corona.lmao.ninja/v3/covid-19/countries";
     return this.htpp.get(URL);
   }
 }

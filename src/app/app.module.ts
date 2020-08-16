@@ -12,7 +12,8 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { ProductsComponent } from "./products/products.component";
 import { StudentsComponent } from "./students/students.component";
 import { FormsModule } from "@angular/forms";
-import { PostsComponent } from "./posts/posts.component"; // for Template Driven Form Module
+import { PostsComponent } from "./posts/posts.component";
+import { FooterComponent } from './footer/footer.component'; // for Template Driven Form Module
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PostsComponent } from "./posts/posts.component"; // for Template Driven
     ProductsComponent,
     StudentsComponent,
     PostsComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
