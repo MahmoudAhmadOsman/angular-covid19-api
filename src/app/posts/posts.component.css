@@ -14,10 +14,14 @@
     overflow-x: hidden;
   }
   .posts img {
-    width: 100%;
-    height: auto;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     margin-bottom: 20px;
-    border-radius: 0px;
+  }
+  p.covid-link {
+    font-size: 11px;
+    text-align: left !important;
   }
 }
 

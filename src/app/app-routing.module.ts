@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: "students", component: StudentsComponent },
   { path: "posts", component: PostsComponent },
 
-  { path: "**", component: PageNotFoundComponent }, // Wildcard route for a 404 page
+  { path: "404", component: PageNotFoundComponent },
+  { path: "**", redirectTo: "404" }, // Wildcard route for a 404 page
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

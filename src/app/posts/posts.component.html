@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="text-danger">{{title}}</h1>
     <hr />
-    <p class="text-muted">
+    <p class="text-muted covid-link">
       Displayed Covid-19 Data From:
       <a href="https://corona.lmao.ninja/v3/covid-19/countries" target="_blank"
         >corona.lmao.ninja//v3/covid-19/countries</a
@@ -10,14 +10,14 @@
     </p>
     <div *ngFor="let country of countries ">
       <div class="row">
-        <div class="col-md-3 col-xs-12">
+        <div class="col-md-3 col-xs-2">
           <img
             src="/assets/images/covid-19.jpg"
             class="card-img-top"
             alt="{{country.Country}}"
           />
         </div>
-        <div class="col-md-9 col-xs-12">
+        <div class="col-md-9 col-xs-10">
           <h3>
             <b class="text-info">Country:</b> &nbsp;
             <a href="/posts/{{country.country}}/">{{country.country}}</a>
