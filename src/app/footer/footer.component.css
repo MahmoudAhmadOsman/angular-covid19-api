@@ -3,4 +3,8 @@
   color: #cdc7c7;
   height: 40px;
   line-height: 40px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
 }

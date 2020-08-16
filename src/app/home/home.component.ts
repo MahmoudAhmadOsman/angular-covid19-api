@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  title: string = "Angular 10 API";
+  title: string = "Angular 10 Covid-19 API";
   // myName: string = "Mahmoud Osman";
 
   constructor() {
