@@ -1,3 +1,4 @@
+import { PostsComponent } from "./posts/posts.component";
 import { StudentsComponent } from "./students/students.component";
 import { ProductsComponent } from "./products/products.component";
 import { NgModule } from "@angular/core";
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "products", component: ProductsComponent },
   { path: "students", component: StudentsComponent },
+  { path: "posts", component: PostsComponent },
+
   { path: "**", component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 @NgModule({

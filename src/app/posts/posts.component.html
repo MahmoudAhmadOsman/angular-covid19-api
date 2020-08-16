@@ -1,0 +1,34 @@
+<section class="posts">
+  <div class="container">
+    <h1 class="text-danger">{{title}}</h1>
+    <hr />
+    <p class="text-muted">
+      Display data from:
+      <a href="https://api.covid19api.com/countries">api.covid19api.com</a>
+    </p>
+    <div *ngFor="let country of countries ">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+          <img
+            src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200320110619-coronavirus-animation.jpg"
+            class="card-img-top"
+            alt="{{country.Country}}"
+          />
+        </div>
+        <div class="col-md-9 col-xs-12">
+          <h3>
+            <b class="text-danger">Country:</b> &nbsp; {{country.Country}}
+          </h3>
+
+          <p><b>Slug:</b>{{country.ISO2}}</p>
+
+          <p><b>ISO2: </b> {{country.ISO2}}</p>
+
+          <p><b>Active Cases:</b>{{country.Active}}</p>
+          <p><b>Confirmed Cases:</b>{{country.Confirmed}}</p>
+          <p><b>Total Deaths:</b>{{country.Deaths}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

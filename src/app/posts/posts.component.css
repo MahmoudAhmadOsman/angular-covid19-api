@@ -1,0 +1,31 @@
+.posts {
+  position: relative;
+}
+.posts img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .posts {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .posts img {
+    width: 92%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 0px;
+  }
+}
+
+.posts p.text-muted {
+  text-align: right;
+}
+
+.posts h3,
+.posts p {
+  border-bottom: 1px solid #ccc;
+}

@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -10,7 +11,8 @@ import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProductsComponent } from "./products/products.component";
 import { StudentsComponent } from "./students/students.component";
-import { FormsModule } from "@angular/forms"; // for Template Driven Form Module
+import { FormsModule } from "@angular/forms";
+import { PostsComponent } from "./posts/posts.component"; // for Template Driven Form Module
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { FormsModule } from "@angular/forms"; // for Template Driven Form Module
     PageNotFoundComponent,
     ProductsComponent,
     StudentsComponent,
+    PostsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
   providers: [],
   bootstrap: [AppComponent],
