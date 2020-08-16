@@ -7,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./posts.component.css"],
 })
 export class PostsComponent implements OnInit {
-  title: string = "Carona Virus API ";
+  title: string = "Coronavirus API ";
 
   //Inject the post Service here
   //posts: any[];
