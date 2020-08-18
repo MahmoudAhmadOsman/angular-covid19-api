@@ -8,3 +8,10 @@
   right: 0px;
   position: fixed;
 }
+
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 11px;
+    color: #7f7b7b;
+  }
+}
