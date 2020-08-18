@@ -1,7 +1,8 @@
-#about-me img {
-  position: relative;
+#about-me p {
+  color: #7d7373;
 }
 #about-me img {
+  position: relative;
   border-radius: 50%;
   width: 150px;
   height: 150px;
