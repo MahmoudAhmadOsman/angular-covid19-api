@@ -22,29 +22,32 @@
           />
         </div>
         <div class="col-md-9 col-xs-10">
-          <h3>
-            <b class="text-info">Country:</b> &nbsp;
-            <a href="/posts/{{country.country}}/">{{country.country}}</a>
-          </h3>
+          <div class="well">
+            <h3>
+              <b class="text-info">Country:</b> &nbsp;
+              <a href="/posts/{{country.country}}/">{{country.country}}</a>
+            </h3>
 
-          <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
-          <p><b>Total Cases: </b> &nbsp;{{country.cases}}</p>
-          <p class="text-warning">
-            <b>Active Cases:</b> &nbsp;{{country.active}}
-          </p>
-          <p><b>Confirmed Cases:</b> &nbsp;{{country.tests}}</p>
-          <p><b>Recovered:</b> &nbsp;{{country.recovered}}</p>
-          <p>
-            <b>Deaths Per One Million:</b> &nbsp;{{country.deathsPerOneMillion}}
-          </p>
-          <p>
-            <b>Recovered Per One Million:</b>
-            &nbsp;{{country.recoveredPerOneMillion}}
-          </p>
+            <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
+            <p><b>Total Cases: </b> &nbsp;{{country.cases}}</p>
+            <p class="text-warning">
+              <b>Active Cases:</b> &nbsp;{{country.active}}
+            </p>
+            <p><b>Confirmed Cases:</b> &nbsp;{{country.tests}}</p>
+            <p><b>Recovered:</b> &nbsp;{{country.recovered}}</p>
+            <p>
+              <b>Deaths Per One Million:</b>
+              &nbsp;{{country.deathsPerOneMillion}}
+            </p>
+            <p>
+              <b>Recovered Per One Million:</b>
+              &nbsp;{{country.recoveredPerOneMillion}}
+            </p>
 
-          <p class="text-danger">
-            <b>Total Deaths:</b> &nbsp;{{country.deaths}}
-          </p>
+            <p class="text-danger">
+              <b>Total Deaths:</b> &nbsp;{{country.deaths}}
+            </p>
+          </div>
         </div>
       </div>
     </div>

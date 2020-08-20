@@ -34,3 +34,12 @@
 .posts p {
   border-bottom: 1px solid #ccc;
 }
+
+.well {
+  background-color: #fcfeff !important;
+  box-shadow: 5px 7px 6px #aaaaaa75;
+  -webkit-box-shadow: 5px 7px 6px #aaaaaa75;
+  -moz-box-shadow: 5px 7px 6px #aaaaaa75;
+  -ms-box-shadow: 5px 7px 6px #aaaaaa75;
+  -o-box-shadow: 5px 7px 6px #aaaaaa75;
+}
