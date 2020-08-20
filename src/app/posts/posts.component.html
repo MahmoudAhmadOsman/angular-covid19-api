@@ -29,23 +29,23 @@
             </h3>
 
             <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
-            <p><b>Total Cases: </b> &nbsp;{{country.cases}}</p>
+            <p><b>Total Cases: </b> &nbsp;{{country.cases | number}}</p>
             <p class="text-warning">
-              <b>Active Cases:</b> &nbsp;{{country.active}}
+              <b>Active Cases:</b> &nbsp;{{country.active | number}}
             </p>
-            <p><b>Confirmed Cases:</b> &nbsp;{{country.tests}}</p>
-            <p><b>Recovered:</b> &nbsp;{{country.recovered}}</p>
+            <p><b>Confirmed Cases:</b> &nbsp;{{country.tests | number}}</p>
+            <p><b>Recovered:</b> &nbsp;{{country.recovered | number}}</p>
             <p>
               <b>Deaths Per One Million:</b>
-              &nbsp;{{country.deathsPerOneMillion}}
+              &nbsp;{{country.deathsPerOneMillion | number}}
             </p>
             <p>
               <b>Recovered Per One Million:</b>
-              &nbsp;{{country.recoveredPerOneMillion}}
+              &nbsp;{{country.recoveredPerOneMillion | number}}
             </p>
 
             <p class="text-danger">
-              <b>Total Deaths:</b> &nbsp;{{country.deaths}}
+              <b>Total Deaths:</b> &nbsp;{{country.deaths | number}}
             </p>
           </div>
         </div>
