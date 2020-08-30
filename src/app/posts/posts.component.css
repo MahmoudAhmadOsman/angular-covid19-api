@@ -11,9 +11,11 @@
 }
 
 @media (max-width: 768px) {
+
   .posts #covid_19 {
-    width: 100%;
+    width: 100% !important;
   }
+
 
   .posts {
     position: relative;
@@ -32,6 +34,9 @@
     font-size: 11px;
     text-align: left !important;
   }
+
+
+
 }
 
 .posts p.text-muted {
