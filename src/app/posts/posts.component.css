@@ -10,11 +10,17 @@
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 998px) {
 
   .posts #covid_19 {
     width: 100% !important;
   }
+
+}
+
+@media (max-width: 768px) {
+
 
 
   .posts {
