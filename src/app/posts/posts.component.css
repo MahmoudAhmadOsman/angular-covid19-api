@@ -11,6 +11,10 @@
 }
 
 @media (max-width: 768px) {
+  .posts #covid_19 {
+    width: 100%;
+  }
+
   .posts {
     position: relative;
     overflow-x: hidden;
