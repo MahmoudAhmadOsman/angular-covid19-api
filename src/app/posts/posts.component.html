@@ -28,6 +28,12 @@
               <a href="/posts/{{country.country}}/">{{country.country}}</a>
             </h3>
 
+            <img
+              class="country-flag"
+              src="{{country.countryInfo.flag}}"
+              alt="{{country.country}}"
+            />
+
             <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
             <p><b>Total Cases: </b> &nbsp;{{country.cases | number}}</p>
             <p class="text-warning">

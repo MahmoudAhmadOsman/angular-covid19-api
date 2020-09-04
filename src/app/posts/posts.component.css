@@ -10,6 +10,15 @@
   object-fit: cover;
 }
 
+.posts img.country-flag {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: block;
+
+}
 
 @media (max-width: 998px) {
 
