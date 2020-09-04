@@ -33,7 +33,7 @@
               class="country-flag"
               src="{{country.countryInfo.flag}}"
               alt="{{country.country}}"
-              title="{{country.country}}"
+              title="{{country.country}}'s flag"
             />
             <hr />
 
@@ -53,7 +53,9 @@
               <b>Recovered Per One Million:</b>
               &nbsp;{{country.recoveredPerOneMillion | number}}
             </p>
-
+            <p class="text-info">
+              <b>Today's Deaths:</b> &nbsp;{{country.todayDeaths | number}}
+            </p>
             <p class="text-danger">
               <b>Total Deaths:</b> &nbsp;{{country.deaths | number}}
             </p>
