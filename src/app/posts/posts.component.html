@@ -18,7 +18,8 @@
           <img
             src="/assets/images/covid-19.jpg"
             class="card-img-top"
-            alt="{{country.Country}}"
+            alt="{{country.country}}"
+            title="Covid 19"
           />
         </div>
         <div class="col-md-9 col-xs-10" id="covid_19">
@@ -34,8 +35,10 @@
               alt="{{country.country}}"
               title="{{country.country}}"
             />
+            <hr />
 
             <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
+            <p><b>Population:</b>&nbsp;{{country.population | number}}</p>
             <p><b>Total Cases: </b> &nbsp;{{country.cases | number}}</p>
             <p class="text-warning">
               <b>Active Cases:</b> &nbsp;{{country.active | number}}
