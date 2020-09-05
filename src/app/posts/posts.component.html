@@ -53,7 +53,8 @@
             </p>
             <p>
               <b>Recovered Per One Million:</b>
-              &nbsp;{{country.recoveredPerOneMillion | number}}
+              &nbsp;{{country.recoveredPerOneMillion | number: '1.0-0'}}
+              <!-- | number: '1.0-0' -> get rid off the decimal -->
             </p>
             <p class="text-info">
               <b>Today's Deaths:</b> &nbsp;{{country.todayDeaths | number}}
