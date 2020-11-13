@@ -1,3 +1,5 @@
+import { FilterPipe } from './pipes/filter.pipe';
+ 
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -11,8 +13,7 @@ import { HomeComponent } from "./home/home.component";
  
 import { PostsComponent } from "./posts/posts.component";
 import { FooterComponent } from "./footer/footer.component";
-import { FilterPipe } from './piple/filter.pipe'; // for Template Driven Form Module
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { FilterPipe } from './piple/filter.pipe'; // for Template Driven Form Mo
     HomeComponent,
     PostsComponent,
     FooterComponent,
-    FilterPipe,
+ FilterPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
