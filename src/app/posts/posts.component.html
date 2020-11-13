@@ -2,17 +2,32 @@
   <div class="container">
     <h1 class="text-danger">{{title}}</h1>
     <small class="text-muted hidden-xs" style="float: right; margin-top: -25px;"
-      >Built by Mr.
+      >Built by
       <a href="http://mahmoudosman.com/" target="_blank">Mahmoud Osman</a>
     </small>
     <hr />
-    <p class="text-muted covid-link">
+    <p class="text-muted covid-link" style="display: none;">
       Displayed Covid-19 Data From:
       <a href="https://corona.lmao.ninja/v3/covid-19/countries" target="_blank"
         >corona.lmao.ninja//v3/covid-19/countries</a
       >
     </p>
-    <div *ngFor="let country of countries ">
+    <br />
+
+    <div class="form-group">
+      <input
+        type="text"
+        [(ngModel)]="CountryName"
+        class="form-control"
+        placeholder="search by a country name..."
+      />
+    </div>
+    {{CountryName}}
+
+    <br />
+    <br />
+
+    <div *ngFor="let country of countries | filter:CountryName">
       <div class="row">
         <div class="col-md-3 col-xs-2">
           <img
@@ -54,7 +69,6 @@
             <p>
               <b>Recovered Per One Million:</b>
               &nbsp;{{country.recoveredPerOneMillion | number: '1.0-0'}}
-              <!-- | number: '1.0-0' -> get rid off the decimal -->
             </p>
             <p class="text-info">
               <b>Today's Deaths:</b> &nbsp;{{country.todayDeaths | number}}

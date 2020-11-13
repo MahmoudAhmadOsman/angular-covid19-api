@@ -9,9 +9,17 @@ import { Component, OnInit } from "@angular/core";
 export class PostsComponent implements OnInit {
   title: string = "Coronavirus API ";
 
+
+//
+public CountryName:any = '';
+ 
+
+
+
   //Inject the post Service here
   //posts: any[];
   countries: any[];
+
   constructor(PostsService: PostsService) {
     //subscrbe(res, err) -> takes res and err
     PostsService.getPosts().subscribe(
@@ -26,5 +34,18 @@ export class PostsComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+
+
+ 
+ 
+
+
+
+
+
+
+
+  ngOnInit(): void {
+    
+  }
 }
