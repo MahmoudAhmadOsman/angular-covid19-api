@@ -10,7 +10,7 @@ import { Pipe, PipeTransform } from '@angular/core';
     //Check if search term is undefined
     if(term === undefined) return searchTerm;
 
-    //Else update the ninja array
+    //Else update the searchTerm array
     return searchTerm.filter(function(showCountry){
       return showCountry.country.toLowerCase().includes(term.toLowerCase());
     });
