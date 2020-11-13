@@ -9,12 +9,7 @@ import { Component, OnInit } from "@angular/core";
 export class PostsComponent implements OnInit {
   title: string = "Coronavirus API ";
 
-
-//
 public CountryName:any = '';
- 
-
-
 
   //Inject the post Service here
   //posts: any[];
