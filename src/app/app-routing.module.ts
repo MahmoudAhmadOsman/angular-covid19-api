@@ -1,5 +1,5 @@
-import { PostsComponent } from "./posts/posts.component";
-
+import { Covid19Component } from './covid19/covid19.component';
+ 
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
@@ -11,10 +11,8 @@ import { from } from "rxjs";
 const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent },
-
-  { path: "covid-19", component: PostsComponent },
-
-  { path: "**", component: PostsComponent },
+    { path: "covid-19", component: Covid19Component },
+  { path: "**", component: HomeComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

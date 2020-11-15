@@ -9,20 +9,19 @@ import { NavComponent } from "./nav/nav.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { AboutComponent } from "./about/about.component";
 import { HomeComponent } from "./home/home.component";
-
  
-import { PostsComponent } from "./posts/posts.component";
 import { FooterComponent } from "./footer/footer.component";
+import { Covid19Component } from './covid19/covid19.component';
  
 @NgModule({
   declarations: [
-    AppComponent,
-    NavComponent,
-    AboutComponent,
-    HomeComponent,
-    PostsComponent,
-    FooterComponent,
- FilterPipe
+      AppComponent,
+      NavComponent,
+      AboutComponent,
+      HomeComponent,
+      FooterComponent,
+      FilterPipe,
+      Covid19Component
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
