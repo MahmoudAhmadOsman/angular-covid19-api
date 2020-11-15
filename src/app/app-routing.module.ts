@@ -14,7 +14,7 @@ const routes: Routes = [
 
   { path: "covid-19", component: PostsComponent },
 
-  { path: "**", component: HomeComponent },
+  { path: "**", component: PostsComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
