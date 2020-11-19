@@ -1,4 +1,4 @@
-<section class="posts">
+<section class="posts" style="margin-bottom: 200px;">
   <div class="container">
     <h1 class="text-danger">{{title}}</h1>
     <small class="text-muted hidden-xs" style="float: right; margin-top: -25px;"
@@ -30,7 +30,12 @@
     <br />
     <br />
 
-    <div *ngFor="let country of countries | filter:CountryName">
+    <div
+      *ngFor="let country of countries | filter:CountryName | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 5,
+                                                      currentPage: page,
+                                                      totalItems: totalRecords }"
+    >
       <div class="row">
         <div class="col-md-3 col-xs-2">
           <img
@@ -81,5 +86,21 @@
         </div>
       </div>
     </div>
+    <!-- Start of Pagination -->
+    <pagination-controls
+      id="listing_pagination"
+      (pageChange)="page = $event"
+      maxSize="7"
+      directionLinks="true"
+      autoHide="true"
+      responsive="true"
+      previousLabel="Previous"
+      nextLabel="Next"
+      screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page"
+      screenReaderCurrentLabel="You're on page"
+    >
+    </pagination-controls>
+    <!-- End of Pagination -->
   </div>
 </section>

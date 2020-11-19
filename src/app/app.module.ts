@@ -1,5 +1,5 @@
 import { FilterPipe } from './pipes/filter.pipe';
- 
+ import {NgxPaginationModule} from 'ngx-pagination'; 
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -23,7 +23,7 @@ import { Covid19Component } from './covid19/covid19.component';
       FilterPipe,
       Covid19Component
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, NgxPaginationModule],
 
   providers: [],
   bootstrap: [AppComponent],

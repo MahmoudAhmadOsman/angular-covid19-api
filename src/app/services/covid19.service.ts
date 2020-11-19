@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class Covid19Service {
 
-    constructor(private htpp: HttpClient) {}
+  constructor(private htpp: HttpClient) {
+    
+  }
 
   //Create custom function
   getCovid(): Observable<any> {

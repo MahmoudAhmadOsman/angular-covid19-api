@@ -12,15 +12,24 @@ export class Covid19Component implements OnInit {
 
 public CountryName:any = '';
   //Inject the covid Service here
-  countries: any[];
-
+    countries: any[];
+    totalRecords: String;
+    page: Number=1;
   constructor(covidService: Covid19Service) {
     //subscrbe(res, err) -> takes res and err
+  // 
     covidService.getCovid().subscribe(
-      (res) => {
-        console.log(res);
+      (data) => {
+        console.log(data);
+  // this.data = new Array<any>()
         //set the res to the countries array
-        this.countries = res;
+        this.countries = data;
+
+//countries = result
+        //Total records
+      this.totalRecords = data.countries.length;
+      //console.log("Total Records: ", totalRecords);
+
       },
       (err) => {
         console.log("error", err);
