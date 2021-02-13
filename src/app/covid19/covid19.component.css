@@ -2,6 +2,15 @@
     position: relative;
     }
 
+.posts.orm-group{
+  border-radius: 50px;
+}
+
+
+
+
+
+
     .posts img {
     width: 150px;
     height: 150px;
