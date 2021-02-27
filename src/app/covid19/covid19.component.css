@@ -6,7 +6,9 @@
   border-radius: 50px;
 }
 
-
+input[type="text"]{
+  border-radius: 50px;
+}
 
 
 

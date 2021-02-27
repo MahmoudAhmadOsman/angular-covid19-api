@@ -19,7 +19,7 @@
         type="text"
         [(ngModel)]="CountryName"
         class="form-control"
-        placeholder="Search by a country name..."
+        placeholder="Search covid-19 by a country name"
       />
     </div>
 
@@ -36,56 +36,59 @@
                                                       currentPage: page,
                                                       totalItems: totalRecords }"
     >
-      <div class="row">
-        <div class="col-md-3 col-xs-2">
-          <img
-            src="/assets/images/covid-19.jpg"
-            class="card-img-top"
-            alt="{{country.country}}"
-            title="Covid 19"
-          />
-        </div>
-        <div class="col-md-9 col-xs-10" id="covid_19">
-          <div class="well">
-            <h3>
-              <b class="text-info">Country:</b> &nbsp;
-              <span class="text-success">{{country.country}}</span>
-            </h3>
-
+      <main *ngIf="countries.length > 0; ">
+        <div class="row">
+          <div class="col-md-3 col-xs-2">
             <img
-              class="country-flag"
-              src="{{country.countryInfo.flag}}"
+              src="/assets/images/covid-19.jpg"
+              class="card-img-top"
               alt="{{country.country}}"
-              title="{{country.country}}'s flag"
+              title="Covid 19"
             />
-            <hr />
+          </div>
+          <div class="col-md-9 col-xs-10" id="covid_19">
+            <div class="well">
+              <h3>
+                <b class="text-info">Country:</b> &nbsp;
+                <span class="text-success">{{country.country}}</span>
+              </h3>
 
-            <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
-            <p><b>Population:</b>&nbsp;{{country.population | number}}</p>
-            <p><b>Total Cases: </b> &nbsp;{{country.cases | number}}</p>
-            <p class="text-warning">
-              <b>Active Cases:</b> &nbsp;{{country.active | number}}
-            </p>
-            <p><b>Confirmed Cases:</b> &nbsp;{{country.tests | number}}</p>
-            <p><b>Recovered:</b> &nbsp;{{country.recovered | number}}</p>
-            <p>
-              <b>Deaths Per One Million:</b>
-              &nbsp;{{country.deathsPerOneMillion | number}}
-            </p>
-            <p>
-              <b>Recovered Per One Million:</b>
-              &nbsp;{{country.recoveredPerOneMillion | number: '1.0-0'}}
-            </p>
-            <p class="text-info">
-              <b>Today's Deaths:</b> &nbsp;{{country.todayDeaths | number}}
-            </p>
-            <p class="text-danger">
-              <b>Total Deaths:</b> &nbsp;{{country.deaths | number}}
-            </p>
+              <img
+                class="country-flag"
+                src="{{country.countryInfo.flag}}"
+                alt="{{country.country}}"
+                title="{{country.country}}'s flag"
+              />
+              <hr />
+
+              <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
+              <p><b>Population:</b>&nbsp;{{country.population | number}}</p>
+              <p><b>Total Cases: </b> &nbsp;{{country.cases | number}}</p>
+              <p class="text-warning">
+                <b>Active Cases:</b> &nbsp;{{country.active | number}}
+              </p>
+              <p><b>Confirmed Cases:</b> &nbsp;{{country.tests | number}}</p>
+              <p><b>Recovered:</b> &nbsp;{{country.recovered | number}}</p>
+              <p>
+                <b>Deaths Per One Million:</b>
+                &nbsp;{{country.deathsPerOneMillion | number}}
+              </p>
+              <p>
+                <b>Recovered Per One Million:</b>
+                &nbsp;{{country.recoveredPerOneMillion | number: '1.0-0'}}
+              </p>
+              <p class="text-info">
+                <b>Today's Deaths:</b> &nbsp;{{country.todayDeaths | number}}
+              </p>
+              <p class="text-danger">
+                <b>Total Deaths:</b> &nbsp;{{country.deaths | number}}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
+
     <!-- Start of Pagination -->
     <pagination-controls
       id="listing_pagination"
@@ -102,5 +105,13 @@
     >
     </pagination-controls>
     <!-- End of Pagination -->
+  </div>
+  <!-- <ng-template #noCountryData>
+    <div class="alert alert-danger">
+      <p class="text-center">{{errorMessage}}</p>
+    </div>
+  </ng-template> -->
+  <div class="alert alert-danger text-center">
+    <h1><i class="fa fa-warning"></i>{{errorMessage}}</h1>
   </div>
 </section>
