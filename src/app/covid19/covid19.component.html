@@ -35,7 +35,7 @@
                                                       currentPage: page,
                                                       totalItems: totalRecords }"
     >
-      <main *ngIf="countries.length > 0; ">
+      <main *ngIf="countries.length > 0; else noCountryData ">
         <div class="row">
           <div class="col-md-3 col-xs-2">
             <img
@@ -105,12 +105,12 @@
     </pagination-controls>
     <!-- End of Pagination -->
   </div>
-  <!-- <ng-template #noCountryData>
+  <ng-template #noCountryData>
     <div class="alert alert-danger">
       <p class="text-center">{{errorMessage}}</p>
     </div>
-  </ng-template> -->
-  <div class="alert alert-danger text-center">
+  </ng-template>
+  <!-- <div class="alert alert-danger text-center">
     <h5><i class="fa fa-warning"></i>&nbsp; {{errorMessage}}</h5>
-  </div>
+  </div> -->
 </section>
