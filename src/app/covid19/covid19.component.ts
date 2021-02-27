@@ -19,7 +19,7 @@ public CountryName:any = '';
   page: Number = 1;
   
  //error handling
-  public errorMessage: String ="Loading...";
+  public errorMessage: String ="Cannot find the search term!";
   
   constructor(covidService: Covid19Service) {
 
