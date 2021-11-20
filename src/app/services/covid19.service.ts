@@ -13,10 +13,7 @@ export class Covid19Service {
 
   //Create custom function
   getCovid(): Observable<any> {
- 
-    //https://api.covid19api.com/countries
-    // const URL = "https://corona.lmao.ninja/v3/covid-19/countries";
-    // return this.htpp.get<any>(URL)
+
     const URL = "https://corona.lmao.ninja/v3/covid-19/countries";
     return this.htpp.get<any>(URL)
       .pipe(catchError(this.handleError))
@@ -26,9 +23,4 @@ export class Covid19Service {
   handleError(error) {
     return throwError(error.message || "Server Error!")
   }
-
-
 }
-
-
-
