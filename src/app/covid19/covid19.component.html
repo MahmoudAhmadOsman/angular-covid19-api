@@ -1,12 +1,12 @@
-<section class="posts" style="margin-bottom: 200px;">
+<main class="posts" style="margin-bottom: 200px">
   <div class="container">
-    <h1 class="text-danger">{{title}}</h1>
-    <small class="text-muted hidden-xs" style="float: right; margin-top: -25px;"
-      >Built by
-      <a href="http://mahmoudosman.com/" target="_blank">Mahmoud Osman</a>
+    <h1 class="text-danger">{{ title }}</h1>
+    <small class="text-muted hidden-xs" style="float: right; margin-top: -25px"
+      >Developed by
+      <a href="https://mahmoudosman.com/" target="_blank">Mahmoud Osman</a>
     </small>
     <hr />
-    <p class="text-muted covid-link" style="display: none;">
+    <p class="text-muted covid-link" style="display: none">
       Displayed Covid-19 Data From:
       <a href="https://corona.lmao.ninja/v3/covid-19/countries" target="_blank"
         >corona.lmao.ninja//v3/covid-19/countries</a
@@ -23,71 +23,86 @@
       />
     </div>
 
-    <span style="color: #ccc; font-weight: bold;"
-      >{{CountryName | uppercase}}</span
-    >
+    <span style="color: #ccc; font-weight: bold">{{
+      CountryName | uppercase
+    }}</span>
     <br />
     <br />
 
+    <!-- Start of ng-template -->
+    <ng-template #noCovidData class="alert alert-warning">
+      <div class="alert alert-warning text-center h3">
+        No Covid-19 Data found!
+      </div>
+    </ng-template>
+    <!-- End of ng-template -->
+
     <div
-      *ngFor="let country of countries | filter:CountryName | paginate: { id: 'listing_pagination',
-                                                      itemsPerPage: 5,
-                                                      currentPage: page,
-                                                      totalItems: totalRecords }"
+      *ngFor="
+        let country of countries
+          | filter: CountryName
+          | paginate
+            : {
+                id: 'listing_pagination',
+                itemsPerPage: 5,
+                currentPage: page,
+                totalItems: totalRecords
+              }
+      "
     >
-      <main *ngIf="countries.length > 0; else noCountryData ">
+      <section *ngIf="countries.length > 0; else noCovidData">
         <div class="row">
           <div class="col-md-3 col-xs-2">
             <img
               src="/assets/images/covid-19.jpg"
               class="card-img-top"
-              alt="{{country.country}}"
+              alt="{{ country.country }}"
               title="Covid 19"
-                 draggable="false"
+              draggable="false"
             />
           </div>
           <div class="col-md-9 col-xs-10" id="covid_19">
             <div class="well">
               <h3>
                 <b class="text-info">Country:</b> &nbsp;
-                <span class="text-success">{{country.country}}</span>
+                <span class="text-success">{{ country.country }}</span>
               </h3>
 
               <img
                 class="country-flag"
-                src="{{country.countryInfo.flag}}"
-                alt="{{country.country}}"
-                title="{{country.country}}'s flag"
-                   draggable="false"
+                src="{{ country.countryInfo.flag }}"
+                alt="{{ country.country }}"
+                title="{{ country.country }}'s flag"
+                draggable="false"
               />
               <hr />
 
-              <p><b>Continent:</b> &nbsp;{{country.continent}}</p>
-              <p><b>Population:</b>&nbsp;{{country.population | number}}</p>
-              <p><b>Total Cases: </b> &nbsp;{{country.cases | number}}</p>
+              <p><b>Continent:</b> &nbsp;{{ country.continent }}</p>
+              <p><b>Population:</b>&nbsp;{{ country.population | number }}</p>
+              <p><b>Total Cases: </b> &nbsp;{{ country.cases | number }}</p>
               <p class="text-warning">
-                <b>Active Cases:</b> &nbsp;{{country.active | number}}
+                <b>Active Cases:</b> &nbsp;{{ country.active | number }}
               </p>
-              <p><b>Confirmed Cases:</b> &nbsp;{{country.tests | number}}</p>
-              <p><b>Recovered:</b> &nbsp;{{country.recovered | number}}</p>
+              <p><b>Confirmed Cases:</b> &nbsp;{{ country.tests | number }}</p>
+              <p><b>Recovered:</b> &nbsp;{{ country.recovered | number }}</p>
               <p>
                 <b>Deaths Per One Million:</b>
-                &nbsp;{{country.deathsPerOneMillion | number}}
+                &nbsp;{{ country.deathsPerOneMillion | number }}
               </p>
               <p>
                 <b>Recovered Per One Million:</b>
-                &nbsp;{{country.recoveredPerOneMillion | number: '1.0-0'}}
+                &nbsp;{{ country.recoveredPerOneMillion | number: "1.0-0" }}
               </p>
               <p class="text-info">
-                <b>Today's Deaths:</b> &nbsp;{{country.todayDeaths | number}}
+                <b>Today's Deaths:</b> &nbsp;{{ country.todayDeaths | number }}
               </p>
               <p class="text-danger">
-                <b>Total Deaths:</b> &nbsp;{{country.deaths | number}}
+                <b>Total Deaths:</b> &nbsp;{{ country.deaths | number }}
               </p>
             </div>
           </div>
         </div>
-      </main>
+      </section>
     </div>
 
     <!-- Start of Pagination -->
@@ -109,10 +124,7 @@
   </div>
   <ng-template #noCountryData>
     <div class="alert alert-danger">
-      <p class="text-center">{{errorMessage}}</p>
+      <p class="text-center">{{ errorMessage }}</p>
     </div>
   </ng-template>
-  <!-- <div class="alert alert-danger text-center">
-    <h5><i class="fa fa-warning"></i>&nbsp; {{errorMessage}}</h5>
-  </div> -->
-</section>
+</main>
