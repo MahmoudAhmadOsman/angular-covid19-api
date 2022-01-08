@@ -16,7 +16,7 @@ public CountryName:any = '';
   //Inject the covid Service here
     countries: any[];
     totalRecords: String;
-  page: Number = 1;
+    page: Number = 1;
   
  //error handling
   public errorMessage: String ="Cannot find the search term!";
@@ -30,16 +30,15 @@ public CountryName:any = '';
         //console.log(data);
         //set the res to the countries array
         this.countries = data;
-
-      //countries = result
+    
         //Total records
       this.totalRecords = data.countries.length;
       //console.log("Total Records: ", totalRecords);
 
       },(error) => {
-        console.log("There is an error: ", error);
+        console.log("Ooops. There is an error: ", error);
        // this.errorMessage = error;
-     this.errorMessage = "Error occured while making an api call";
+      this.errorMessage = "Error occured while making an api call";
          
  
       }
