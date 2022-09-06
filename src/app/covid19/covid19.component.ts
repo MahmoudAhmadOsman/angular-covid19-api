@@ -34,8 +34,7 @@ export class Covid19Component implements OnInit {
       },
       (error) => {
         console.log('Ooops. There is an error: ', error);
-        this.error = error.toString();
-         
+        this.error = error;
       }
     );
   }
