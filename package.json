@@ -28,6 +28,7 @@
     "@angular/router": "~10.0.6",
     "express": "^4.17.1",
     "ngx-pagination": "^5.0.0",
+    "ngx-toastr": "^13.2.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "typescript": "~3.9.5",

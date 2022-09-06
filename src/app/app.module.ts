@@ -12,6 +12,7 @@ import { HomeComponent } from "./home/home.component";
  
 import { FooterComponent } from "./footer/footer.component";
 import { Covid19Component } from './covid19/covid19.component';
+import { ToastrModule } from 'ngx-toastr';
  
 @NgModule({
   declarations: [
@@ -23,7 +24,13 @@ import { Covid19Component } from './covid19/covid19.component';
       FilterPipe,
       Covid19Component
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, NgxPaginationModule],
+  imports: [BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgxPaginationModule,
+    ToastrModule.forRoot()
+  ],
 
   providers: [],
   bootstrap: [AppComponent],
